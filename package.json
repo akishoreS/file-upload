@@ -1,0 +1,28 @@
+{
+  "name": "file-upload",
+  "version": "1.0.0",
+  "description": "Express + S3 file upload service with lightweight job queue",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"No automated tests yet\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.933.0",
+    "@aws-sdk/lib-storage": "^3.933.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "mongodb": "^7.0.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "pino": "^10.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
