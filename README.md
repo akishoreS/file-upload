@@ -130,17 +130,3 @@ Client --> POST /process/:fileId --> enqueue job --> worker --> S3 stream --> Mo
 - Bad lines are isolated. They are recorded with `state: 'errored'` so you can
   inspect them later without reprocessing the entire file.
 
-## Further Improvements
-
-- Persist the job queue state in MongoDB for crash recovery.
-- Accept gzip uploads by swapping `multer` for `busboy` + streaming decompression.
-- Support alternate file formats (CSV, custom delimiters) by injecting parsers.
-- Add automated tests plus an OpenAPI spec for the endpoints.
-- Add authentication (e.g., IAM or JWT) before exposing to the public internet.
-
-## Deliverables Checklist
-
-- [x] Express server with `/upload` on EC2/S3 (code & instructions provided).
-- [x] Optional `/process/:fileId` endpoint with a custom in-memory job queue.
-- [x] Documentation covering deployment, architecture, and operational notes.
-- [x] Resilient processing strategy for large, imperfect files.
